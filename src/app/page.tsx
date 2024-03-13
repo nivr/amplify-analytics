@@ -28,12 +28,15 @@ configureAutoTrack({
   }
 });
 
-record({
-  name: 'albumVisit',
-  attributes: { genre: '', artist: '' },
-});
+
 
 export default function Home() {
+  
+  record({
+    name: 'customEvent',
+    attributes: { propOne: 'Green', propTwo: 'Orange' },
+  });
+  
   return (
     <h1>Hello, world!</h1>
   );
