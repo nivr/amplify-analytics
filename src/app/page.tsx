@@ -1,7 +1,7 @@
 import Image from "next/image";
 //import Amplify from 'aws-amplify';
 import { Amplify } from "aws-amplify";
-import awsmobile from './aws-exports';
+import awsmobile from '../aws-exports';
 //import { record } from 'aws-amplify/analytics';
 import { configureAutoTrack } from 'aws-amplify/analytics';
 import { record } from 'aws-amplify/analytics';
