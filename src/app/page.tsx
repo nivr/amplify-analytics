@@ -5,7 +5,6 @@ import awsmobile from '../aws-exports';
 //import { record } from 'aws-amplify/analytics';
 import { configureAutoTrack } from 'aws-amplify/analytics';
 import { record } from 'aws-amplify/analytics';
-import { url } from "inspector";
 Amplify.configure(awsmobile);
 
 configureAutoTrack({
@@ -27,22 +26,6 @@ configureAutoTrack({
       return window.location.origin + window.location.pathname;
     }
   }
-});
-
-record({
-  name: 'customPageViewEvent',
-  attributes: {
-    url: window.location.href,
-    title: document.title,
-    screenHeight: window.screen.height.toString(),
-    screenWidth: window.screen.width.toString(),
-    userAgent: window.navigator.userAgent
-  }
-})
-
-record({
-  name: 'outsideHomeEvent',
-  attributes: { propOne: 'Before', propTwo: 'Home' },
 });
 
 
