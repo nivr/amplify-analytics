@@ -28,6 +28,11 @@ configureAutoTrack({
   }
 });
 
+record({
+  name: 'outsideHomeEvent',
+  attributes: { propOne: 'Before', propTwo: 'Home' },
+});
+
 
 
 export default function Home() {
